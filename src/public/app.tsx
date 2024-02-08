@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './index.css'
-import { useEvent, useInterval } from './hooks'
+import reactLogo from '../assets/react.svg'
+import '../index.css'
+import { useEvent, useInterval } from '../hooks'
 
 function App() {
   const [count, setCount] = useState(0)

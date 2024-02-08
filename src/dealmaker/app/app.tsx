@@ -5,8 +5,8 @@ import ReactDOM from 'react-dom/client'
 
 
 
-function App(): JSX.Element {
-  return <>{"Hello World"}</>
+export function App(): JSX.Element {
+  return <>{"Deal Maker"}</>
 }
 
 ReactDOM.createRoot(document.getElementById('app')!).render(
