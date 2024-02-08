@@ -13,16 +13,9 @@ module.exports = {
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
-    ],
-    "array": [
-      "warn",
-      { default: "array" }
-    ],
-    "@typescript-eslint/no-explicit-any": "error"
+    ]
+    , "@typescript-eslint/no-explicit-any": "error"
     , "@typescript-eslint/prefer-as-const": "error"
     , "@typescript-eslint/prefer-for-of": "error"
-    , "@typescript-eslint/prefer-readonly-parameter-types": ["warn", {
-      allow :[]
-    }]
   }
 }

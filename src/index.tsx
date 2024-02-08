@@ -1,31 +1,29 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './index.css'
 import { useEvent, useInterval } from './hooks'
 
 function App() {
   const [count, setCount] = useState(0)
 
-  useEvent("online", evt => {
+  useEvent("online", (evt: Event) => {
     console.log(`now online, ${evt.target}`)
   })
-  
-  useEvent("offline", evt => {
+
+  useEvent("offline", (evt: Event) => {
     console.log(`now offline, ${evt.target}`)
   })
 
-  useInterval(x => {
+  useInterval((x: number) => {
     console.log(`${x}`)
   }, 1000)
 
   return (
     <>
-      <div> 
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
+      <div>
+        <a href="./page2/index.html">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
@@ -43,3 +41,9 @@ function App() {
 }
 
 export default App
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
